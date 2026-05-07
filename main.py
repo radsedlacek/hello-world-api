@@ -17,6 +17,10 @@ class TextResponse(BaseModel):
 def read_root():
     return {"message": "Hello World API is running"}
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 
 @app.post("/process-text", response_model=TextResponse)
 def process_text(request: TextRequest):

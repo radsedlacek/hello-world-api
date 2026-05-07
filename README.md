@@ -75,6 +75,7 @@ docker run -p 8000:8000 hello-world-api
 | GET | / | Hello world endpoint |
 | GET | /health | Health check |
 | POST | /process-text | Process input text |
+| POST | /classify-text | Classify text as invoice-related |
 
 ---
 
@@ -94,6 +95,26 @@ docker run -p 8000:8000 hello-world-api
 {
   "message": "Přijal jsem text: Hello FastAPI",
   "length": 13
+}
+```
+
+## POST /classify-text Example
+
+### Request
+
+```json
+{
+  "text": "Dobrý den, v příloze zasíláme fakturu."
+}
+```
+
+### Response
+
+```json
+{
+  "text": "Dobrý den, v příloze zasíláme fakturu.",
+  "is_invoice": true,
+  "reason": "Text contains invoice-related keyword."
 }
 ```
 
