@@ -23,3 +23,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t hello-world-api .
+
+      - name: Run tests
+        run: python -m pytest
