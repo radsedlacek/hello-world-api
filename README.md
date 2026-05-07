@@ -1,3 +1,5 @@
+![CI workflow status badge showing the current build and test status for the hello-world-api project on GitHub Actions](https://github.com/radsedlacek/hello-world-api/actions/workflows/ci.yml/badge.svg)
+
 # Hello World API
 
 Simple REST API built with Python and FastAPI.
